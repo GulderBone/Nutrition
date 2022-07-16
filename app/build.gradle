@@ -6,12 +6,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk Versions.compileSdk
 
     defaultConfig {
         applicationId "com.gulderbone.nutrition"
-        minSdk 23
-        targetSdk 32
+        minSdk Versions.minSdk
+        targetSdk Versions.targetSdk
         versionCode 1
         versionName "1.0"
 
@@ -37,19 +37,19 @@ dependencies {
     implementation project(":data")
 
     implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.6.1'
+    implementation "androidx.appcompat:appcompat:${Versions.appCompat}"
+    implementation "com.google.android.material:material:${Versions.material}"
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
 
-    kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.13.0'
-    implementation 'com.squareup.moshi:moshi:1.13.0'
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
+    implementation "com.squareup.moshi:moshi:${Versions.moshi}"
 
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    implementation "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    implementation "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
 
-    kapt 'com.google.dagger:hilt-compiler:2.42'
-    implementation("com.google.dagger:hilt-android:2.42")
+    kapt "com.google.dagger:hilt-compiler:${Versions.hilt}"
+    implementation "com.google.dagger:hilt-android:${Versions.hilt}"
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.3")
 
