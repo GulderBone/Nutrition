@@ -19,7 +19,6 @@ object NetworkModule {
 
     @Provides
     fun provideProductService(
-
         moshi: Moshi,
     ): ProductService =
         Retrofit.Builder()
