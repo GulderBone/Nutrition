@@ -8,4 +8,7 @@ object Versions {
     const val moshi = "1.13.0"
     const val retrofit = "2.9.0"
     const val hilt = "2.42"
+    const val coroutines = "1.6.3"
+    const val junit = "1.1.3"
+    const val espresso = "3.4.0"
 }
