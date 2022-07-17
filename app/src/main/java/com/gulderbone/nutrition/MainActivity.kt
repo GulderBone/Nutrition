@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // TODO delete - it is just for testing purposes
         runBlocking {
             val product = productRepository.getProductByBarcode("04963406")
             println(product)
