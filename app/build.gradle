@@ -46,7 +46,4 @@ dependencies {
     implementation "com.google.dagger:hilt-android:${Versions.hilt}"
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
-
-    androidTestImplementation "androidx.test.ext:junit:${Versions.junit}"
-    androidTestImplementation "androidx.test.espresso:espresso-core:${Versions.espresso}"
 }
