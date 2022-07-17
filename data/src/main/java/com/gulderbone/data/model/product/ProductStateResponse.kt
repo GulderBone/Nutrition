@@ -1,4 +1,4 @@
-package com.gulderbone.data.model
+package com.gulderbone.data.model.product
 
 import com.squareup.moshi.JsonClass
 

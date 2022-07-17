@@ -1,5 +1,6 @@
 package com.gulderbone.data.repository
 
+import com.gulderbone.data.model.product.Product
 import com.gulderbone.data.repository.mapper.ProductStateMapper
 import com.gulderbone.data.service.ProductService
 import javax.inject.Inject
@@ -13,9 +14,4 @@ class ProductRepository @Inject constructor(
         productService.getProductByBarcode(barcode)
             .let(productStateMapper::from)
 }
-
-data class Product(
-    private val name: String,
-    private val tags: List<String>,
-)
 

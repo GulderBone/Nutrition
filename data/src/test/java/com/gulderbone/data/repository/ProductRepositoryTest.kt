@@ -1,7 +1,8 @@
 package com.gulderbone.data.repository
 
-import com.gulderbone.data.model.ProductResponse
-import com.gulderbone.data.model.ProductStateResponse
+import com.gulderbone.data.model.product.Product
+import com.gulderbone.data.model.product.ProductResponse
+import com.gulderbone.data.model.product.ProductStateResponse
 import com.gulderbone.data.repository.mapper.ProductStateMapper
 import com.gulderbone.data.service.ProductService
 import kotlinx.coroutines.test.runTest
