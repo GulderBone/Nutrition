@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
@@ -9,13 +9,11 @@ android {
     compileSdk Versions.compileSdk
 
     defaultConfig {
-        applicationId "com.gulderbone.nutrition"
         minSdk Versions.minSdk
         targetSdk Versions.targetSdk
-        versionCode 1
-        versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -25,17 +23,15 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = "1.8"
     }
 }
 
 dependencies {
-    implementation project(":presentation")
-    implementation project(":data")
 
     implementation "androidx.core:core-ktx:${Versions.kotlin}"
     implementation "androidx.appcompat:appcompat:${Versions.appCompat}"
@@ -45,5 +41,6 @@ dependencies {
     kapt "com.google.dagger:hilt-compiler:${Versions.hilt}"
     implementation "com.google.dagger:hilt-android:${Versions.hilt}"
 
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+    implementation("androidx.navigation:navigation-fragment-ktx:${Versions.navigation}")
+    implementation("androidx.navigation:navigation-ui-ktx:${Versions.navigation}")
 }
