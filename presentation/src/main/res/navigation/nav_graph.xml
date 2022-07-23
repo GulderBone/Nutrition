@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nutritionMainFragment">
+
+    <fragment
+        android:id="@+id/nutritionMainFragment"
+        android:name="com.gulderbone.presentation.NutritionMainFragment"
+        android:label="fragment_nutrition_main"
+        tools:layout="@layout/fragment_nutrition_main" />
+</navigation>
