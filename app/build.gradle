@@ -40,7 +40,7 @@ dependencies {
     implementation "androidx.core:core-ktx:${Versions.kotlin}"
     implementation "androidx.appcompat:appcompat:${Versions.appCompat}"
     implementation "com.google.android.material:material:${Versions.material}"
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
 
     kapt "com.google.dagger:hilt-compiler:${Versions.hilt}"
     implementation "com.google.dagger:hilt-android:${Versions.hilt}"
