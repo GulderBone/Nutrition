@@ -1,6 +1,6 @@
 package com.gulderbone.data.repository
 
-import com.gulderbone.data.model.product.Product
+import com.gulderbone.domain.feature.model.Product
 import com.gulderbone.data.model.product.ProductResponse
 import com.gulderbone.data.model.product.ProductStateResponse
 import com.gulderbone.data.repository.mapper.ProductStateMapper
@@ -13,7 +13,7 @@ import org.mockito.kotlin.doReturn
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.verify
 
-class ProductRepositoryTest {
+class ProductRepositoryImplTest {
 
     private val fakeProductStateResponse = ProductStateResponse(
         code = "12345678",
@@ -35,7 +35,7 @@ class ProductRepositoryTest {
         on { from(any()) } doReturn fakeProduct
     }
 
-    private val tested = ProductRepository(mockProductService, mockProductStateMapper)
+    private val tested = ProductRepositoryImpl(mockProductService, mockProductStateMapper)
 
     @Test
     fun `when getProductByBarcode, then gets product by barcode and maps it`() = runTest {
