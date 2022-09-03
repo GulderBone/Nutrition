@@ -33,6 +33,8 @@ android {
 }
 
 dependencies {
+    implementation project(":domain")
+
     kapt "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
     implementation "com.squareup.moshi:moshi:${Versions.moshi}"
 

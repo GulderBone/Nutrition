@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "Nutrition"
 include ':app'
 include ':presentation'
+include ':domain'
 include ':data'
