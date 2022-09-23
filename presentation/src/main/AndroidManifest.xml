@@ -4,7 +4,7 @@
 
     <application>
         <activity
-            android:name=".NutritionMainActivity"
+            android:name=".nutritionmain.NutritionMainActivity"
             android:exported="true" >
 
             <intent-filter>
