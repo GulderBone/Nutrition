@@ -1,4 +1,4 @@
-package com.gulderbone.presentation
+package com.gulderbone.presentation.viewbinding
 
 import android.os.Handler
 import android.os.Looper
