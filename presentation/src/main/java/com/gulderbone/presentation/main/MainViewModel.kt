@@ -10,6 +10,10 @@ internal class MainViewModel @Inject constructor(
     private val getProductByBarcodeUseCase: GetProductByBarcodeUseCase,
 ) : ViewModel() {
 
+    init {
+        println("henlo")
+    }
+
     fun getProductName(barcode: String) {
 
 //        getProductByBarcodeUseCase.run(barcode)
