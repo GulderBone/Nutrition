@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'org.sonarqube' version "3.4.0.2513"
 }
 
 android {
@@ -30,6 +31,14 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "GulderBone_Nutrition"
+        property "sonar.organization", "gulderbone"
+        property "sonar.host.url", "https://sonarcloud.io"
     }
 }
 
