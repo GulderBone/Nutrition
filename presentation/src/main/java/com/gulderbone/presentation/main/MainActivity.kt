@@ -6,11 +6,11 @@ import com.gulderbone.presentation.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+internal class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_nutrition_main)
+        setContentView(R.layout.activity_main)
 
         // TODO delete - it is just for testing purposes
 //        runBlocking {

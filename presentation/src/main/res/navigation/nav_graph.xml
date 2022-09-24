@@ -9,5 +9,5 @@
         android:id="@+id/nutritionMainFragment"
         android:name="com.gulderbone.presentation.main.MainFragment"
         android:label="fragment_nutrition_main"
-        tools:layout="@layout/fragment_nutrition_main" />
+        tools:layout="@layout/fragment_main" />
 </navigation>
