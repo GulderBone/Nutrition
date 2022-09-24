@@ -5,6 +5,10 @@ plugins {
     id 'dagger.hilt.android.plugin'
 }
 
+android {
+    compileSdk Versions.compileSdk
+}
+
 dependencies {
     kapt "com.google.dagger:hilt-compiler:${Versions.hilt}"
     implementation "com.google.dagger:hilt-android:${Versions.hilt}"
