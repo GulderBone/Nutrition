@@ -1,8 +1,26 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    dependencies {
+        classpath("com.google.dagger:hilt-android-gradle-plugin:2.42")
+        classpath("de.mannodermaus.gradle.plugins:android-junit5:1.8.2.0")
+        classpath("org.jacoco:org.jacoco.agent:${Versions.jacoco}")
+    }
+}
+
 plugins {
     id 'com.android.application' version '7.2.0' apply false
     id 'com.android.library' version '7.2.0' apply false
     id 'org.jetbrains.kotlin.android' version '1.7.0' apply false
+    id 'org.sonarqube' version "3.4.0.2513"
+}
+
+sonarqube {
+    properties {
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.projectKey", "GulderBone_Nutrition"
+        property "sonar.organization", "gulderbone"
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.core.codeCoveragePlugin", "jacoco"
+    }
 }
 
 task clean(type: Delete) {

@@ -1,0 +1,40 @@
+apply plugin: 'jacoco'
+apply from: "$rootDir/gradle/jacocosonarexcludes.gradle"
+
+def includeClassFiles = [
+        '**/classes/**/main/**',
+        '**/intermediates/classes/debug/**',
+        '**/intermediates/javac/debug/*/classes/**',
+        '**/tmp/kotlin-classes/debug/**'
+]
+
+def executionFiles = [
+        'jacoco/*.exec',
+        'outputs/code_coverage/*/connected/*.ec'
+]
+def sourceFiles = [
+        'src/main/kotlin',
+        'src/main/java'
+]
+
+jacoco {
+    toolVersion = Versions.jacoco
+    reportsDirectory = file("$rootDir/build/reports/jacoco")
+}
+
+task jacocoReport(type: JacocoReport) {
+    group "verification"
+
+    classDirectories.from = subprojects.collect {
+        fileTree(dir: it.buildDir, includes: includeClassFiles, excludes: rootProject.coverageExcludeClassFiles)
+    }
+    executionData.from = subprojects.collect {
+        fileTree(dir: it.buildDir, includes: executionFiles)
+    }
+    sourceDirectories.from = sourceFiles
+
+    reports {
+        xml.required = true
+        html.required = false
+    }
+}

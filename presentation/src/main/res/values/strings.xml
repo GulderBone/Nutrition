@@ -1,0 +1,5 @@
+<resources>
+    <string name="hello_blank_fragment">Nutriszjon main fragment</string>
+    <string name="barcode_input_hint">barcode</string>
+    <string name="search">Search</string>
+</resources>
