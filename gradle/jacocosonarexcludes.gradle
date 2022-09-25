@@ -1,0 +1,16 @@
+def android = [
+    '**/R.*',
+]
+
+def classes = [
+]
+
+def files = [
+]
+
+def duplicationAllowedFiles = [
+]
+
+project.ext.coverageExcludeClassFiles = android + classes + files
+project.ext.duplicationExcludeClassFiles = duplicationAllowedFiles
+

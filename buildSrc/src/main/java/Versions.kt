@@ -13,4 +13,5 @@ object Versions {
     const val coroutines = "1.6.3"
     const val junit5 = "5.8.2"
     const val mockitoKotlin = "4.0.0"
+    const val jacoco = "0.8.8"
 }
