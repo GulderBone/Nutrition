@@ -1,25 +1,14 @@
 def android = [
     '**/R.*',
-    '**/R$*.*',
-    '**/*$ViewInjector*.*',
-    '**/BuildConfig.*',
-    '**/Manifest*.*',
 ]
 
 def classes = [
-    '**/*Extensions.*',
-    '**/*Exception.*',
-    '**/*Binder*.*',
-    '**/*Fake*.*',
 ]
 
 def files = [
-    '**/ConfigureLeakCanary.kt',
 ]
 
 def duplicationAllowedFiles = [
-    '**/*Fake*.*',
-    '**/database/migration/Migration*.*'
 ]
 
 project.ext.coverageExcludeClassFiles = android + classes + files
