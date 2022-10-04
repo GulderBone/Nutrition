@@ -2,4 +2,6 @@
     <string name="hello_blank_fragment">Nutriszjon main fragment</string>
     <string name="barcode_input_hint">barcode</string>
     <string name="search">Search</string>
+    <string name="camera_permissions_not_granted">Camera permissions are not granted</string>
+    <string name="scan_barcode">Scan Barcode</string>
 </resources>

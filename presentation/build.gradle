@@ -46,6 +46,15 @@ dependencies {
     kapt "com.google.dagger:hilt-compiler:${Versions.hilt}"
     implementation "com.google.dagger:hilt-android:${Versions.hilt}"
 
-    implementation("androidx.navigation:navigation-fragment-ktx:${Versions.navigation}")
-    implementation("androidx.navigation:navigation-ui-ktx:${Versions.navigation}")
+    // TODO: Delete unnecessary
+    implementation "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    implementation "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+
+    implementation "androidx.camera:camera-core:${Versions.camerax}"
+    implementation "androidx.camera:camera-camera2:${Versions.camerax}"
+    implementation "androidx.camera:camera-lifecycle:${Versions.camerax}"
+    implementation "androidx.camera:camera-video:${Versions.camerax}"
+
+    implementation "androidx.camera:camera-view:${Versions.camerax}"
+    implementation "androidx.camera:camera-extensions:${Versions.camerax}"
 }

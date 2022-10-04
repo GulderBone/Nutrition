@@ -14,4 +14,5 @@ object Versions {
     const val junit5 = "5.8.2"
     const val mockitoKotlin = "4.0.0"
     const val jacoco = "0.8.8"
+    const val camerax = "1.1.0-beta01"
 }
